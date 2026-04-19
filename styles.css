@@ -441,16 +441,65 @@ footer {
     font-size: 0.85rem;
 }
 
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--white);
+    transition: var(--transition);
+}
+
+header.scrolled .menu-toggle {
+    color: var(--primary-color);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        gap: 0;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* Transparent header needs dark text in mobile menu for readability */
+    .nav-links a {
+        color: var(--primary-color);
+        padding: 1.5rem 2rem;
+        width: 100%;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .nav-links.active {
+        max-height: 300px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    header:not(.scrolled) .nav-links {
+        /* Optional: adjust background if header is transparent */
+        background: var(--white);
+    }
+
     .contact-container {
         grid-template-columns: 1fr;
     }
     .hero-content h1 {
         font-size: 2.5rem;
-    }
-    .nav-links {
-        display: none;
     }
     .footer-content {
         gap: 3rem;
