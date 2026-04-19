@@ -26,33 +26,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Contact form handling (Mock)
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            message: document.getElementById('message').value
-        };
-
-        console.log('Form Submitted:', formData);
-
-        // Simple visual feedback
-        const submitBtn = contactForm.querySelector('button');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Message Sent!';
-        submitBtn.style.background = '#28a745';
-        submitBtn.style.borderColor = '#28a745';
-
-        contactForm.reset();
-
-        setTimeout(() => {
-            submitBtn.textContent = originalText;
-            submitBtn.style.background = '';
-            submitBtn.style.borderColor = '';
-        }, 3000);
-    });
-}
