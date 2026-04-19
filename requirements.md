@@ -1,7 +1,7 @@
-# Website Requirements: The Way Church
+# Website Requirements: The Way Praise and Worship
 
 ## Project Overview
-The goal is to create a modern, premium static website for "The Way Church". The website will serve as a digital front door for the community, providing essential information about service times, social media presence, and contact details. The site will be optimized for performance and deployed on Vercel.
+The goal is to create a modern, premium static website for "The Way Praise and Worship". The website will serve as a digital front door for the community, providing essential information about service times, social media presence, and contact details. The site will be optimized for performance and deployed on Vercel.
 
 ## Core Features
 

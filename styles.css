@@ -75,11 +75,20 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.25rem;
     font-weight: 700;
     font-family: 'Outfit', sans-serif;
     color: var(--white);
     letter-spacing: -0.5px;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    border-radius: 4px;
 }
 
 header.scrolled .logo {
