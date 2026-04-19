@@ -129,6 +129,13 @@ header.scrolled .nav-links a {
     color: var(--white);
 }
 
+.hero-about {
+    background: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url('images/about_hero.png');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+}
+
 .hero-content h1 {
     font-size: 4rem;
     margin-bottom: 1.5rem;
