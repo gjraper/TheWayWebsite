@@ -2,7 +2,7 @@
 
 :root {
     --primary-color: #1a1a1a;
-    --accent-color: #d4af37;
+    --accent-color: #2563eb;
     --text-color: #333333;
     --bg-color: #f9f9f9;
     --white: #ffffff;
@@ -119,21 +119,40 @@ header.scrolled .nav-links a {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url('church_hero.png');
+    background: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url('images/scenes/stage.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     text-align: center;
     color: var(--white);
+    padding-bottom: 6vh;
 }
 
 .hero-about {
-    background: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url('images/about_hero.png');
+    background: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url('images/scenes/turf.jpg');
     background-size: cover;
     background-position: center;
     height: 60vh;
+}
+
+.hero-sister-churches {
+    background: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url('images/scenes/sisterchurch.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    position: relative;
+}
+
+.hero-attribution {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+    pointer-events: none;
 }
 
 .hero-content h1 {
@@ -512,4 +531,16 @@ header.scrolled .menu-toggle {
     .footer-social {
         justify-content: center;
     }
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(100px) scale(0.95);
+    transition: all 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
