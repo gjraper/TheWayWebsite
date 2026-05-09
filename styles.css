@@ -547,3 +547,27 @@ header.scrolled .menu-toggle {
     opacity: 1;
     transform: translateY(0) scale(1);
 }
+
+/* =============================================
+   Page Transition Overlay
+   ============================================= */
+#page-transition {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: var(--primary-color);
+    clip-path: circle(0% at 50% 50%);
+    pointer-events: none;
+    will-change: clip-path;
+}
+
+#page-transition.cover {
+    clip-path: circle(150% at 50% 50%);
+    transition: clip-path 0.55s cubic-bezier(0.76, 0, 0.24, 1);
+    pointer-events: all;
+}
+
+#page-transition.uncover {
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path 0.55s cubic-bezier(0.76, 0, 0.24, 1);
+}
