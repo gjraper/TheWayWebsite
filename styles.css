@@ -159,15 +159,19 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1.5rem 0;
+    /* Infinite top background shield */
+    margin-top: -100px;
+    padding-top: calc(100px + 1.5rem + env(safe-area-inset-top, 0px));
+    padding-bottom: 1.5rem;
     transition: var(--transition);
     background: transparent;
 }
 
 header.scrolled {
     background: var(--bg-color);
-    top: -1px; /* Over-flush to prevent mobile sub-pixel gaps */
-    padding: calc(1rem + 1px) 0 1rem 0;
+    top: 0; /* Resetting top to 0 as margin/padding handles the gap */
+    padding-top: calc(100px + 1rem + env(safe-area-inset-top, 0px));
+    padding-bottom: 1rem;
     box-shadow: 0 2px 20px rgba(60, 40, 10, 0.1);
     border-bottom: 1px solid rgba(60, 40, 10, 0.06);
 }
@@ -816,11 +820,13 @@ header.scrolled .menu-toggle {
    ============================================= */
 @media (max-width: 768px) {
     header {
-        padding: 0.75rem 0;
+        padding-top: calc(100px + 0.75rem + env(safe-area-inset-top, 0px));
+        padding-bottom: 0.75rem;
     }
 
     header.scrolled {
-        padding: calc(0.75rem + 1px) 0 0.75rem 0;
+        padding-top: calc(100px + 0.75rem + env(safe-area-inset-top, 0px));
+        padding-bottom: 0.75rem;
     }
 
     .menu-toggle {
