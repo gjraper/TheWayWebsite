@@ -3,22 +3,17 @@
 // =============================================
 const overlay = document.getElementById('page-transition');
 
-// On page load: overlay starts covering, then collapses to reveal the page
+// On page load: flash white instantly, then fade out to reveal the page
 if (overlay) {
-    // Begin fully covered (set instantly, no transition yet)
-    overlay.style.clipPath = 'circle(150% at 50% 50%)';
     overlay.style.transition = 'none';
+    overlay.style.opacity = '1';
+    overlay.style.pointerEvents = 'none';
 
-    // Force reflow so the browser registers the starting state
+    // Force reflow, then fade out
     overlay.getBoundingClientRect();
-
-    // Now animate to uncovered
     requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-            overlay.classList.add('uncover');
-            overlay.style.clipPath = '';
-            overlay.style.transition = '';
-        });
+        overlay.style.transition = '';
+        overlay.style.opacity = '0';
     });
 }
 
@@ -44,14 +39,15 @@ document.addEventListener('click', (e) => {
         return;
     }
 
-    // Remove uncover, add cover to expand from center
-    overlay.classList.remove('uncover');
-    overlay.classList.add('cover');
+    // Flash white instantly, then navigate
+    overlay.style.transition = 'none';
+    overlay.style.opacity = '1';
+    overlay.getBoundingClientRect();
 
-    // After the cover animation completes, navigate
-    overlay.addEventListener('transitionend', () => {
+    // Small delay so the flash is visible before the browser unloads
+    setTimeout(() => {
         window.location.href = href;
-    }, { once: true });
+    }, 80);
 });
 
 // =============================================
