@@ -498,12 +498,24 @@ header.scrolled .menu-toggle {
         pointer-events: none;
     }
 
+    /* Each list item takes the full row */
+    .nav-links li {
+        width: 100%;
+    }
+
     /* Transparent header needs dark text in mobile menu for readability */
     .nav-links a {
+        display: block;
         color: var(--primary-color);
-        padding: 1.5rem 2rem;
+        padding: 1.25rem 2rem;
         width: 100%;
-        border-bottom: 1px solid rgba(0,0,0,0.05);
+        border-bottom: 1px solid rgba(0,0,0,0.08);
+        font-size: 1rem;
+    }
+
+    /* Extra spacing between the two nav items */
+    .nav-links li + li {
+        margin-top: 0.25rem;
     }
 
     .nav-links.active {
