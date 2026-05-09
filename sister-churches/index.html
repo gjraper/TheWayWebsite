@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sister Churches | The Way Praise and Worship</title>
     <meta name="description"
-        content="Learn about our Sister Churches and our extended community of faith.">
+        content="Learn about our Sister Churches and our extended community of faith across Austin.">
     <link rel="icon" href="../images/favicon/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../images/favicon/favicon.png" type="image/png">
     <link rel="icon" href="../images/favicon/favicon.ico">
     <link rel="apple-touch-icon" href="../images/favicon/apple-touch-icon.png">
     <link rel="manifest" href="../images/favicon/site.webmanifest">
     <link rel="stylesheet" href="../styles.css">
-    <!-- Font Awesome for social icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
@@ -28,7 +27,7 @@
                 </a>
                 <ul class="nav-links">
                     <li><a href="/about">About</a></li>
-                    <li><a href="/sister-churches">Sister Churches</a></li>
+                    <li><a href="/sister-churches" class="active">Sister Churches</a></li>
                 </ul>
                 <div class="menu-toggle" id="mobile-menu">
                     <i class="fas fa-bars"></i>
@@ -38,6 +37,7 @@
     </header>
 
     <main>
+        <!-- Sister Churches Hero -->
         <section class="hero hero-sister-churches">
             <div class="container">
                 <div class="hero-content">
@@ -49,35 +49,59 @@
             </div>
         </section>
 
-        <section class="sermon-times" style="padding-top: 5rem;">
+        <!-- Global Unity Section -->
+        <section class="unity-intro">
             <div class="container">
-                <div class="times-grid">
-                    <div class="time-card reveal">
-                        <h3>1a Iglesia Apostolica de la Fe en Cristo Jesus</h3>
-                        <p style="margin-top: 1rem;">Join us on Sundays at ____</p>
-                        <p>Únete a nosotros los domingos a las ____</p>
-                        <p style="margin-top: 1rem;">
-                            <a href="https://maps.app.goo.gl/aGM31CTC6gNRK8uFA" target="_blank"
-                                style="color: var(--accent-color); font-weight: 600; text-decoration: underline;">
-                                11010 Georgian Dr, Austin, TX 78753
-                            </a>
+                <div class="asymmetric-layout">
+                    <div class="reveal">
+                        <div class="section-title">
+                            <h2 style="font-style: normal;">Growing Together</h2>
+                            <span class="accent-bar"></span>
+                        </div>
+                        <p style="font-size: 1.15rem; color: var(--text-color); line-height: 1.8;">
+                            Our faith extends beyond our own doors. We are proud to stand alongside our sister churches, sharing a common mission to serve and grow together in the heart of Austin.
                         </p>
                     </div>
-                    <div class="time-card reveal">
+                    <div class="reveal">
+                        <div class="text-reveal-block">
+                            <p style="font-style: italic; color: var(--text-muted); margin: 0;">
+                                "Different voices, one spirit. We are unified by our shared pursuit of truth and community."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Church Listing Section -->
+        <section class="sermon-times">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Extended Community</h2>
+                    <span class="accent-bar"></span>
+                    <p class="section-subtitle">United in faith, growing together.</p>
+                </div>
+                <div class="times-grid">
+                    <div class="church-card reveal">
+                        <h3>1a Iglesia Apostolica de la Fe en Cristo Jesus</h3>
+                        <p>Join us on Sundays at ____</p>
+                        <p>Únete a nosotros los domingos a las ____</p>
+                        <a href="https://maps.app.goo.gl/aGM31CTC6gNRK8uFA" target="_blank" class="card-link">
+                            <i class="fa-solid fa-map-pin"></i>
+                            11010 Georgian Dr, Austin, TX 78753
+                        </a>
+                    </div>
+                    <div class="church-card reveal">
                         <h3>New Wine Prayer Ministry International</h3>
-                        <p style="margin-top: 1rem;">
-                            <a href="https://www.facebook.com/NewwineprayerministryINT/" target="_blank"
-                                style="color: var(--accent-color); font-weight: 600; text-decoration: underline;">
-                                <i class="fa-brands fa-facebook" style="margin-right: 0.5rem;"></i>Facebook Page
-                            </a>
-                        </p>
-                        <p style="margin-top: 1rem;">Join us on Sundays at ____</p>
-                        <p style="margin-top: 1rem;">
-                            <a href="https://maps.app.goo.gl/FmkVEZk5YENj8SJJ7" target="_blank"
-                                style="color: var(--accent-color); font-weight: 600; text-decoration: underline;">
-                                11010 Georgian Dr, Austin, TX 78753
-                            </a>
-                        </p>
+                        <a href="https://www.facebook.com/NewwineprayerministryINT/" target="_blank" class="card-link">
+                            <i class="fa-brands fa-facebook"></i>
+                            Facebook Page
+                        </a>
+                        <p>Join us on Sundays at ____</p>
+                        <a href="https://maps.app.goo.gl/FmkVEZk5YENj8SJJ7" target="_blank" class="card-link">
+                            <i class="fa-solid fa-map-pin"></i>
+                            11010 Georgian Dr, Austin, TX 78753
+                        </a>
                     </div>
                 </div>
             </div>
@@ -90,18 +114,18 @@
                 <div class="footer-col">
                     <h3>Our Location</h3>
                     <a href="https://maps.app.goo.gl/QuTGbRUTS7M2AZpp6" target="_blank" class="hidden-link">
-                        11010 Georgian Dr, Austin, TX 78753
+                        11010 Georgian Dr<br>Austin, TX 78753
                     </a>
                 </div>
                 <div class="footer-col">
-                    <h3>Additional Resources</h3>
-                    <a href="/about" class="hidden-link">About Us</a><br>
-                    <a href="/sister-churches" class="hidden-link" style="margin-top: 0.5rem; display: inline-block;">Sister Churches</a>
+                    <h3>Navigate</h3>
+                    <a href="/about" class="hidden-link">About Us</a>
+                    <a href="/sister-churches" class="hidden-link">Sister Churches</a>
                 </div>
                 <div class="footer-col">
                     <h3>Find Us On</h3>
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/thewaypraise/" target="_blank">
+                        <a href="https://www.facebook.com/thewaypraise/" target="_blank" aria-label="Facebook">
                             <i class="fa-brands fa-facebook"></i>
                         </a>
                     </div>
