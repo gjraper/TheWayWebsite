@@ -3,17 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>The Way Praise and Worship | A Community of Faith</title>
     <meta name="description"
-        content="Welcome to The Way Praise and Worship. Join us for worship services, community events, and spiritual growth.">
+        content="Welcome to The Way Praise and Worship. Join us for worship services, community events, and spiritual growth in Austin, TX.">
     <link rel="icon" href="images/favicon/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="images/favicon/favicon.png" type="image/png">
     <link rel="icon" href="images/favicon/favicon.ico">
     <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
     <link rel="manifest" href="images/favicon/site.webmanifest">
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome for social icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
@@ -22,7 +21,7 @@
     <header id="header">
         <div class="container">
             <nav>
-                <a href="#home" class="logo">
+                <a href="/" class="logo">
                     <img src="images/logo/TheWayLogo.jpg" alt="The Way Praise and Worship Logo" class="logo-img">
                     <span>THE WAY PRAISE AND WORSHIP</span>
                 </a>
@@ -38,56 +37,84 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Hero Section — image contains embedded text; scroll cue guides the reader down -->
         <section class="hero" id="home">
+            <a href="#sermons" class="scroll-cue" id="scroll-cue-btn">
+                <span>Scroll</span>
+                <div class="scroll-cue__chevron"></div>
+            </a>
+        </section>
+
+        <!-- Mission & Heart Section -->
+        <section class="mission-heart">
             <div class="container">
-                <div class="hero-content">
-                    <!-- <h1>Live Your Best Life Today</h1>
-                    <p>Everyone is welcome here and every story matters to us. Join us this Sunday as we explore
-                        our faith and community together.</p>
-                    <div class="hero-btns">
-                        <a href="#sermons" class="btn">Join Us This Sunday</a>
-                    </div> -->
+                <div class="asymmetric-layout">
+                    <div class="reveal">
+                        <div class="section-title">
+                            <h2 style="font-style: normal;">The Heart of Our Community</h2>
+                            <span class="accent-bar"></span>
+                        </div>
+                        <p class="drop-cap">
+                            The Way Praise and Worship is more than just a place to gather on Sundays. It is a vibrant community dedicated to the pursuit of authentic faith and purposeful living. We believe that every story matters and everyone has a unique path to follow.
+                        </p>
+                    </div>
+                    <div class="reveal">
+                        <blockquote class="floating-quote">
+                            "Your best life begins with your current life. We are here to walk that path with you, one step at a time."
+                        </blockquote>
+                        <div style="margin-top: 2rem;">
+                            <a href="/about" class="btn">Our Full Story</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sermon Times Section -->
+        <!-- Service Times Section -->
         <section class="sermon-times" id="sermons">
             <div class="container">
                 <div class="section-title">
-                    <h2>Attend in-person or join us online for Church</h2>
-                    <span></span>
+                    <h2>Attend in-person or join us online</h2>
+                    <span class="accent-bar"></span>
+                    <p class="section-subtitle">We gather every Sunday at 9am — all are welcome.</p>
                 </div>
                 <div class="times-grid">
                     <div class="time-card reveal">
-                        <i class="fa-solid fa-location-dot"
-                            style="font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <i class="fa-solid fa-location-dot card-icon"></i>
                         <h3>In-Person</h3>
                         <p>Join us on Sundays at 9am</p>
-                        <p style="margin-top: 1rem;">
-                            <a href="https://maps.app.goo.gl/FmkVEZk5YENj8SJJ7" target="_blank"
-                                style="color: var(--accent-color); font-weight: 600; text-decoration: underline;">
-                                11010 Georgian Dr, Austin, TX 78753
-                            </a>
-                        </p>
+                        <a href="https://maps.app.goo.gl/FmkVEZk5YENj8SJJ7" target="_blank" class="card-link">
+                            <i class="fa-solid fa-map-pin"></i>
+                            11010 Georgian Dr, Austin, TX 78753
+                        </a>
                     </div>
                     <div class="time-card reveal">
-                        <i class="fa-brands fa-facebook"
-                            style="font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <i class="fa-brands fa-facebook card-icon"></i>
                         <h3>Church Online</h3>
                         <p>Watch and chat with our online community Sundays at 9am</p>
-                        <p style="margin-top: 1rem;">
-                            <a href="https://www.facebook.com/thewaypraise" target="_blank"
-                                style="color: var(--accent-color); font-weight: 600; text-decoration: underline; display: inline-flex; align-items: center; gap: 0.5rem;">
-                                <i class="fa-brands fa-facebook"></i> Facebook Live
-                            </a>
-                        </p>
+                        <a href="https://www.facebook.com/thewaypraise" target="_blank" class="card-link">
+                            <i class="fa-brands fa-facebook"></i>
+                            Facebook Live
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Join Us CTA -->
+        <section class="join-cta">
+            <div class="container">
+                <div class="reveal">
+                    <h2>Join Us This Sunday</h2>
+                    <p>
+                        We would love to have you join our community. Whether in-person or online, your presence is welcome here.
+                    </p>
+                    <a href="https://maps.app.goo.gl/FmkVEZk5YENj8SJJ7" target="_blank" class="btn btn-outline">
+                        Get Directions
+                    </a>
+                </div>
+            </div>
+        </section>
 
     </main>
 
@@ -97,18 +124,18 @@
                 <div class="footer-col">
                     <h3>Our Location</h3>
                     <a href="https://maps.app.goo.gl/QuTGbRUTS7M2AZpp6" target="_blank" class="hidden-link">
-                        11010 Georgian Dr, Austin, TX 78753
+                        11010 Georgian Dr<br>Austin, TX 78753
                     </a>
                 </div>
                 <div class="footer-col">
-                    <h3>Additional Resources</h3>
-                    <a href="/about" class="hidden-link">About Us</a><br>
-                    <a href="/sister-churches" class="hidden-link" style="margin-top: 0.5rem; display: inline-block;">Sister Churches</a>
+                    <h3>Navigate</h3>
+                    <a href="/about" class="hidden-link">About Us</a>
+                    <a href="/sister-churches" class="hidden-link">Sister Churches</a>
                 </div>
                 <div class="footer-col">
                     <h3>Find Us On</h3>
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/thewaypraise/" target="_blank">
+                        <a href="https://www.facebook.com/thewaypraise/" target="_blank" aria-label="Facebook">
                             <i class="fa-brands fa-facebook"></i>
                         </a>
                     </div>
